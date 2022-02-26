@@ -50,7 +50,7 @@ with models.DAG(
   
   ------------------------------------------------------------------------
   
-  - airflow scheduler 입력 후 웹서버 접속하여 확인하기
+ - airflow scheduler 입력 후 웹서버 접속하여 확인하기
   
   
   출처: https://blog.si-analytics.ai/59

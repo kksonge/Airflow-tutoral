@@ -12,6 +12,3 @@ for rfm_module in py_execute_biz_modules['RFM']:
    rfm_clustering_tasks.append(rfm_clustering_task)
    
 execute_biz_starter >> rfm_clustering_tasks >> execute_biz_end
-
-
-![img](https://user-images.githubusercontent.com/86215635/155934048-e33d440a-b9a1-45f3-a3fb-39988e4574b4.png)

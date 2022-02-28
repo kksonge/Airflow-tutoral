@@ -33,3 +33,6 @@ for rfm_module in range(3):
     )
     
 chain(execute_biz_starter, rfm_clustering_tasks, execute_biz_end)
+
+
+출처 : https://ninano1109.tistory.com/181

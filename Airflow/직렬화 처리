@@ -44,3 +44,6 @@ for rfm_module in range(3):
 
 rfm_clustering_task >> execute_biz_end
     
+
+
+출처 : https://ninano1109.tistory.com/181

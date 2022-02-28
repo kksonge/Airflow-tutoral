@@ -1,0 +1,19 @@
+rfm_clustering_tasks = []
+
+for rfm_module in range(3):
+    rfm_clustering_tasks.append(EmrAddStepsOperator
+       (task_id='rfm_clustering_{}_emr'.format(py_execute_biz_modules['RFM'][rfm_module]),
+        job_flow_id=created_job_flow_id,
+        aws_conn_id='aws_default',
+        queue='main',
+        steps=get_pyspark_execute_rfm(py_execute_biz_modules['RFM'][rfm_module]),
+        dag=dag
+       )
+    )
+    
+    if rfm_module == 0:
+        execute_biz_starter >> rfm_clustering_tasks[rfm_module]
+    else:
+        rfm_clustering_tasks[rfm_module-1] >> rfm_clustering_tasks[rfm_module]
+     
+rfm_clustering_tasks[-1] >> execute_biz_end
